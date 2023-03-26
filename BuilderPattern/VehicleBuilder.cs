@@ -13,6 +13,8 @@ namespace BuilderPattern
         void SetTransmission(int speeds, string clutchType);
         void SetWheelRadius(int rad);
         void SetFrameType(string frame);
+        Car getResult();
+        void reset();
     }
 
     public class Builder:VehicleBuilder
@@ -31,8 +33,7 @@ namespace BuilderPattern
 
         public void SetTransmission(int speeds, string clutchType)
         {
-            car.GearsBox.SetGears( speeds);
-            car.GearsBox.SetClutchType( clutchType);
+            car.GearsBox = new Transmission(speeds, clutchType);
         }
 
         public void SetWheelRadius(int rad)

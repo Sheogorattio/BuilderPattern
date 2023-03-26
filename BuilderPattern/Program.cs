@@ -10,6 +10,8 @@ namespace BuilderPattern
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(new Director().makeDaewoo(new Builder()).ToString());
+            Console.ReadKey();
         }
     }
 }
